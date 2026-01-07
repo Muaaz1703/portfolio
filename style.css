@@ -1227,7 +1227,103 @@ visibility:hidden;
     right: 30px;
     font-size: 32px;
     cursor: pointer;
-    color:white;
+}
+
+
+
+
+/* ---------- TABLET (max 1024px) ---------- */
+@media (max-width: 1024px) {
+    .container-portfolio {
+        padding: 50px 16px;
+    }
+
+    .portfolio-grid {
+        gap: 24px;
+    }
+
+    .project-img {
+        height: 200px;
+    }
+
+    .project-content h3 {
+        font-size: 17px;
+    }
+
+    .project-content p {
+        font-size: 13.5px;
+    }
+}
+
+/* ---------- MOBILE (max 768px) ---------- */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        border-radius: 14px;
+    }
+
+    .project-img {
+        height: 190px;
+    }
+
+    .project-content {
+        padding: 18px;
+    }
+
+    .project-content h3 {
+        font-size: 16px;
+    }
+
+    .project-content p {
+        font-size: 13px;
+    }
+
+    .project-tech {
+        gap: 6px;
+    }
+
+    .tech-tag {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* ---------- SMALL MOBILE (max 480px) ---------- */
+@media (max-width: 480px) {
+    .container-portfolio {
+        padding: 40px 14px;
+    }
+
+    .project-img {
+        height: 170px;
+    }
+
+    .project-content h3 {
+        font-size: 15px;
+    }
+
+    .project-content p {
+        font-size: 12.5px;
+    }
+
+    .design-gallery {
+        padding: 20px;
+    }
+
+    .close-btn {
+        top: 12px;
+        right: 18px;
+        font-size: 28px;
+    }
 }
 
 
