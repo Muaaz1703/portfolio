@@ -1328,6 +1328,17 @@ visibility:hidden;
 }
 
 
+@media (max-width: 768px) {
+    .project-img video {
+        pointer-events: none;
+    }
+}
+@media (hover: none) {
+    .project-card:hover {
+        transform: none;
+    }
+}
+
 
 
 
