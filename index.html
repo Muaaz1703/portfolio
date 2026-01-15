@@ -348,66 +348,234 @@ function closeGallery() {
 
 
 
-    <section id="skills" class="skills">
-    <div class="container">
-        <h2>My Skills</h2>
-
-        <div class="skill-tabs">
-            <button class="tab-btn active" data-tab="frontend">
-                <i class="fas fa-laptop-code"></i> Frontend
-            </button>
-            <button class="tab-btn" data-tab="backend">
-                <i class="fas fa-server"></i> Backend
-            </button>
-            <button class="tab-btn" data-tab="tools">
-                <i class="fas fa-tools"></i> Tools
-            </button>
-        </div>
-
-        <div class="tab-content active" id="frontend">
-            <ul class="skill-list">
-                <li><i class="fab fa-html5"></i> HTML5</li>
-                <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                <li><i class="fas fa-wind"></i> Tailwind CSS</li>
-                <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
-                <li><i class="fab fa-js"></i> JavaScript</li>
-                <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
-            </ul>
-        </div>
-
-        <div class="tab-content" id="backend">
-            <ul class="skill-list">
-                <li><i class="fab fa-php"></i> PHP</li>
-                <li><i class="fas fa-database"></i> MySQL</li>
-                <li><i class="fab fa-wordpress"></i> WordPress</li>
-                <li><i class="fas fa-plug"></i> API Integration</li>
-            </ul>
-        </div>
-
-        <div class="tab-content" id="tools">
-            <ul class="skill-list">
-                <li><i class="fab fa-github"></i> GitHub</li>
-                <li><i class="fas fa-robot"></i> AI Tools</li>
-                <li><i class="fas fa-terminal"></i> VS Code</li>
-                <li><i class="fas fa-cloud-upload-alt"></i> Deployment</li>
-            </ul>
-        </div>
+ <div class="container-skill">
+        <section id="skills" class="skills">
+            <h2>My Skills</h2>
+            
+            <div class="skill-tabs">
+                <button class="tab-btn active" data-tab="frontend">
+                    <i class="fas fa-laptop-code"></i> Frontend Development
+                </button>
+                <button class="tab-btn" data-tab="backend">
+                    <i class="fas fa-server"></i> Backend Development
+                </button>
+                <button class="tab-btn" data-tab="tools">
+                    <i class="fas fa-tools"></i> Tools & Technologies
+                </button>
+            </div>
+            
+            <div class="tab-content active" id="frontend">
+                <ul class="skill-list">
+                    <li>
+                        <i class="fab fa-html5"></i>
+                        <div class="skill-info">
+                            <h3>HTML5</h3>
+                            <p>Semantic markup, accessibility, modern HTML APIs</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fab fa-css3-alt"></i>
+                        <div class="skill-info">
+                            <h3>CSS3</h3>
+                            <p>Flexbox, Grid, animations, responsive design</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-wind"></i>
+                        <div class="skill-info">
+                            <h3>Tailwind CSS</h3>
+                            <p>Utility-first CSS framework for rapid UI development</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fab fa-bootstrap"></i>
+                        <div class="skill-info">
+                            <h3>Bootstrap</h3>
+                            <p>Responsive grid system, components, and utilities</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fab fa-js"></i>
+                        <div class="skill-info">
+                            <h3>JavaScript</h3>
+                            <p>ES6+, DOM manipulation, async programming</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="skill-info">
+                            <h3>Responsive Design</h3>
+                            <p>Mobile-first approach, cross-browser compatibility</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 94%"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="backend">
+                <ul class="skill-list">
+                    <li>
+                        <i class="fab fa-php"></i>
+                        <div class="skill-info">
+                            <h3>PHP</h3>
+                            <p>Object-oriented programming, MVC frameworks</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-database"></i>
+                        <div class="skill-info">
+                            <h3>MySQL</h3>
+                            <p>Database design, optimization, and administration</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fab fa-wordpress"></i>
+                        <div class="skill-info">
+                            <h3>WordPress</h3>
+                            <p>Theme development, plugin customization, WooCommerce</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-plug"></i>
+                        <div class="skill-info">
+                            <h3>API Integration</h3>
+                            <p>REST APIs, authentication, third-party services</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="tools">
+                <ul class="skill-list">
+                    <li>
+                        <i class="fab fa-github"></i>
+                        <div class="skill-info">
+                            <h3>GitHub</h3>
+                            <p>Version control, collaboration, CI/CD workflows</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-robot"></i>
+                        <div class="skill-info">
+                            <h3>AI Tools</h3>
+                            <p>ChatGPT, Copilot, Midjourney, and other AI assistants</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 78%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-terminal"></i>
+                        <div class="skill-info">
+                            <h3>VS Code</h3>
+                            <p>Extensions, debugging, integrated terminal</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <div class="skill-info">
+                            <h3>Deployment</h3>
+                            <p>Cloud platforms, Docker, server configuration</p>
+                            <div class="skill-level">
+                                <div class="level-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+                    </section>
     </div>
-</section>
-<script>
-const tabs = document.querySelectorAll(".tab-btn");
-const contents = document.querySelectorAll(".tab-content");
 
-tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active"));
-        contents.forEach(c => c.classList.remove("active"));
-
-        tab.classList.add("active");
-        document.getElementById(tab.dataset.tab).classList.add("active");
-    });
-});
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Get the target tab ID
+                    const targetTab = button.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show the target tab content
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+            
+            // Add a subtle hover effect to skill items
+            const skillItems = document.querySelectorAll('.skill-list li');
+            skillItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Optional: Add keyboard navigation for tabs
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                    const activeTab = document.querySelector('.tab-btn.active');
+                    let nextTab;
+                    
+                    if (e.key === 'ArrowRight') {
+                        nextTab = activeTab.nextElementSibling || tabButtons[0];
+                    } else if (e.key === 'ArrowLeft') {
+                        nextTab = activeTab.previousElementSibling || tabButtons[tabButtons.length - 1];
+                    }
+                    
+                    if (nextTab) {
+                        nextTab.click();
+                        nextTab.focus();
+                    }
+                }
+            });
+        });
+    </script>
 
 
   
