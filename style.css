@@ -398,7 +398,7 @@
 
 @media (max-width: 768px) {
     .logo img {
-        height: 32px;
+        height: 42px;
     }
 }
 
@@ -1614,6 +1614,7 @@ visibility:hidden;
         transform: none;
     }
 }
+
 
 
 
