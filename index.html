@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Web Designer & Developer in India | Muaaz Shaikh</title>
+<meta name="description" content="Muaaz Shaikh is a freelance web designer & developer in India creating fast, responsive and SEO-friendly websites for businesses.">
+
+<link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'crimson': '#DC2626',
+                        'deep-crimson': '#B91C1C',
+                        'light-gray': '#F9FAFB',
+                        'text-gray': '#6B7280',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'slide-in': 'slideIn 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(40px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateX(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-triangle {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -15px rgba(20, 184, 166, 0.2);
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #14B8A6;
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; opacity: 0; }
+        .stagger-2 { animation-delay: 0.2s; opacity: 0; }
+        .stagger-3 { animation-delay: 0.3s; opacity: 0; }
+        .stagger-4 { animation-delay: 0.4s; opacity: 0; }
+        .stagger-5 { animation-delay: 0.5s; opacity: 0; }
+
+
+
+        .testimonial-slider {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slider-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .slider-nav:hover {
+            background: #f9fafb;
+            transform: translateY(-50%) scale(1.05);
+        }
+        
+        .slider-prev {
+            left: -24px;
+        }
+        
+        .slider-next {
+            right: -24px;
+        }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            right: -40%;
+            width: 80%;
+            height: 2px;
+            background: #f1f5f9;
+            z-index: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .rating-star {
+            color: #FBBF24;
+        }
+
+
+
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (hover: hover) {
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+
+
+.ms-logo {
+    height: 90px;   /* increase height */
+    width: auto;    /* keeps aspect ratio */
+}
+
+
+
+
+    </style>
+</head>
+
+
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 h-16 nav-blur bg-white/80 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<img src="images/ms-logo.png" alt="MS Logo" class="ms-logo">
+    <span class="text-xl font-bold text-black"> </span>
+</div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="#Home" class="text-gray-600 hover:text-black transition-colors">Home</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-black transition-colors">Portfolio</a>
+                <a href="#about" class="text-gray-600 hover:text-black transition-colors">About</a>
+                <a href="#services" class="text-gray-600 hover:text-black transition-colors">Services</a>
+                <a href="#skills" class="text-gray-600 hover:text-black transition-colors">Skills</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-black transition-colors">Testimonials</a>
+                <a href="#contact" class="text-gray-600 hover:text-black transition-colors">Contact</a>
+
+                <button class="bg-[#DC2626] hover:bg-[#DC2626] text-white rounded-full px-6 py-2 transition-all duration-300 transform hover:scale-105">
+                    Hire Me
+                </button>
+            </nav>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="h-6 w-6 text-gray-700"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 shadow-lg hidden">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#home" class="text-gray-600 hover:text-black transition-colors py-2">Home</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-black transition-colors py-2">Portfolio</a>
+                <a href="#about" class="text-gray-600 hover:text-black transition-colors py-2">About</a>
+                <a href="#services" class="text-gray-600 hover:text-black transition-colors py-2">Services</a>
+                <a href="#skills" class="text-gray-600 hover:text-black transition-colors py-2">Skills</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-black transition-colors py-2">Testimonials</a>
+                <a href="#contact" class="text-gray-600 hover:text-black transition-colors py-2">Contact</a>
+
+                <button class="bg-[#DC2626] hover:bg-[#DC2626] text-white rounded-full px-6 py-3 transition-colors w-full mt-2">
+                    Hire Me
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden">
+    <!-- Geometric Pattern Overlay -->
+    <div class="absolute top-10 left-10 w-64 h-64 hero-triangle bg-red-100/30 transform rotate-12"></div>
+    <div class="absolute bottom-20 right-10 w-40 h-40 hero-triangle bg-red-100/20 transform -rotate-45"></div>
+    <div class="absolute top-1/3 right-1/4 w-20 h-20 hero-triangle bg-red-100/10 transform rotate-90"></div>
+    
+    <div class="max-w-6xl mx-auto px-6 py-20 text-center relative z-10">
+        <!-- Award Badge -->
+        <div class="inline-flex items-center border border-[#DC2626] rounded-full px-4 py-2 mb-8 fade-in">
+            <i data-lucide="award" class="h-4 w-4 text-[#DC2626] mr-2"></i>
+            <span class="text-sm font-medium text-[#DC2626]">Award-Winning Designer</span>
+        </div>
+            
+           <!-- Headline -->
+                <h1 class="text-4xl md:text-7xl font-bold tracking-tight mb-8 animate-slide-up" style="animation-delay: 0.2s">
+                    Hey, I'm <span class="text-crimson">Muaaz Shaikh</span> — <br>Web Designer & Developer
+                </h1>
+                
+                <!-- Subtext -->
+                <p class="text-xl text-text-gray max-w-2xl mx-auto mb-12 animate-slide-up" style="animation-delay: 0.4s">
+                  I help businesses and startups get more leads with fast, modern and mobile-friendly websites.
+                </p>
+
+            
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 fade-in stagger-3">
+                <a href="#work" class="bg-[#DC2626] hover:bg-[#DC2626] text-white rounded-full px-8 py-4 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    View Portfolio
+                </a>
+                <a href="#contact" class="border border-gray-300 hover:border-gray-400 text-gray-800 rounded-full px-8 py-4 transition-all duration-300 hover:scale-105">
+                    Get Quote
+                </a>
+            </div>
+            
+            <!-- Additional Info -->
+            <div class="flex items-center justify-center space-x-6 text-gray-500 fade-in stagger-4">
+                <div class="flex items-center">
+                    <i data-lucide="message-circle" class="h-4 w-4 mr-2"></i>
+                    <span>Free consultation</span>
+                </div>
+                <div class="h-4 w-px bg-gray-300"></div>
+                <div class="flex items-center">
+                    <i data-lucide="zap" class="h-4 w-4 mr-2"></i>
+                    <span>Fast turnaround</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Project Showcase -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A selection of recent work that showcases my design process and creative solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                
+<!-- Project 1 -->
+<div class="project-card group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 fade-in stagger-1">
+    <div class="h-80 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+             alt="Brand Identity Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+    </div>
+    
+    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/90 to-transparent opacity-0 transition-all duration-500 flex flex-col justify-end p-8">
+        <span class="text-red-300 text-sm font-medium mb-2">Wordpress</span>
+        <h3 class="text-2xl font-bold text-white mb-2">WebNova Agency</h3>
+        <p class="text-gray-200 mb-6">High-performance WordPress websites with professional design and optimization.</p>
+        <a href="http://digitalagency17.free.nf/" class="text-white font-medium inline-flex items-center">
+            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+    </div>
+    
+    <div class="bg-white p-6">
+        <h3 class="text-xl font-bold mb-2">WebNova Agency</h3>
+        <p class="text-gray-600 mb-4">High-performance WordPress websites with professional design and optimization.</p>
+        <a href="http://digitalagency17.free.nf/" class="text-[#DC2626] font-medium inline-flex items-center hover:text-[#B91C1C]">
+            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+ <!-- Project 2 -->
+<div class="project-card group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 fade-in stagger-2">
+    <div class="h-80 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+             alt="Mobile App UI Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+    </div>
+
+    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/90 to-transparent opacity-0 transition-all duration-500 flex flex-col justify-end p-8">
+        <span class="text-red-300 text-sm font-medium mb-2">HTML5,Tailwind CSS,JavaScript (Vanilla JS)</span>
+        <h3 class="text-2xl font-bold text-white mb-2">Taste Royale</h3>
+        <p class="text-gray-200 mb-6">Premium restaurant website with luxury dark theme design.</p>
+        <a href="https://muaaz1703.github.io/taste-royale/" class="text-white font-medium inline-flex items-center">
+            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+    </div>
+
+    <div class="bg-white p-6">
+        <h3 class="text-xl font-bold mb-2">Taste Royale</h3>
+        <p class="text-gray-600 mb-4">Premium restaurant website with luxury dark theme design.</p>
+        <a href="https://muaaz1703.github.io/taste-royale/" class="text-[#DC2626] font-medium inline-flex items-center hover:text-[#B91C1C]">
+            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+    </div>
+</div>
+                
+
+   <!-- Project 3 -->
+<div class="project-card group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 fade-in stagger-3">
+    <div class="h-80 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+             alt="E-commerce Website" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+    </div>
+
+    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/90 to-transparent opacity-0 transition-all duration-500 flex flex-col justify-end p-8">
+        <span class="text-red-300 text-sm font-medium mb-2">WordPress,
+WooCommerce,
+Elementor</span>
+        <h3 class="text-2xl font-bold text-white mb-2">EaseShop</h3>
+        <p class="text-gray-200 mb-6">Modern responsive eCommerce website built with WordPress and WooCommerce.</p>
+        <a href="http://easeshop.free.nf/" class="text-white font-medium inline-flex items-center">
+            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+    </div>
+
+    <div class="bg-white p-6">
+        <h3 class="text-xl font-bold mb-2">EaseShop</h3>
+        <p class="text-gray-600 mb-4">Modern responsive eCommerce website built with WordPress and WooCommerce.</p>
+        <a href="http://easeshop.free.nf/" class="text-[#DC2626] font-medium inline-flex items-center hover:text-[#B91C1C]">
+            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+    </div>
+</div>
+
+
+<!-- Logo Project -->
+<div class="project-card logo group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+    
+    <div class="h-80 overflow-hidden">
+        <img src="images/5.jpeg"
+            alt="Logo Design"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+    </div>
+
+    <div class="bg-white p-6">
+        <h3 class="text-xl font-bold mb-2">Modern Logo Design</h3>
+        <p class="text-gray-600 mb-4">Creative and professional logo branding for businesses.</p>
+    </div>
+
+</div>
+
+                <!-- Project 4 -->
+                                
+                <!-- Project 5 -->
+                               
+                <!-- Project 6 -->
+
+
+                           </div>
+            
+            <div class="text-center mt-16 fade-in">
+                <a href="#" class="inline-flex items-center text-gray-800 hover:text-[#DC2626] font-medium text-lg">
+                    View All Projects <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- About Me -->
+    <section id="about" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-slide-in">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-8">About Me</h2>
+                        <p class="text-text-gray text-lg mb-6">
+                            I'm a freelance <span class="font-bold text-black">Web Designer & Developer</span> specializing in modern, responsive, and business-focused websites using both custom code and WordPress.
+                        </p>
+                        <p class="text-text-gray text-lg mb-8">
+                            I create visually appealing, fast, user-friendly, and conversion-driven websites tailored to client needs. My expertise spans across HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, jQuery, AJAX, PHP, MySQL, and WordPress.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">HTML5</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">CSS3</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">JavaScript</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Tailwind CSS</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Bootstrap</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">jQuery</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">AJAX</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">MySQL</span>
+
+
+
+
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">PHP</span>
+                            <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">WordPress</span>
+                        </div>
+                    </div>
+                    <div class="animate-slide-in" style="animation-delay: 0.3s">
+                        <div class="relative">
+                            <div class="w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                                     alt="Workspace" class="w-full h-full object-cover">
+                            </div>
+                            <div class="absolute -bottom-6 -left-6 bg-crimson text-white p-8 rounded-2xl shadow-xl">
+                                <p class="text-4xl font-bold"></p>
+                                <p class="text-lg"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-light-gray">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-slide-up">What I Do</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg animate-slide-up" style="animation-delay: 0.1s">
+                    <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-2xl text-crimson"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Web Design & Development</h3>
+                    <p class="text-text-gray">Creating modern, responsive websites with clean code and intuitive user interfaces.</p>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg animate-slide-up" style="animation-delay: 0.2s">
+                    <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-2xl text-crimson"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Logo Design</h3>
+                    <p class="text-text-gray">Crafting unique brand identities with memorable logos that represent your business vision.</p>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg animate-slide-up" style="animation-delay: 0.3s">
+                    <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center mb-6">
+                        <i class="fab fa-wordpress text-2xl text-crimson"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">WordPress Development</h3>
+                    <p class="text-text-gray">Building custom WordPress themes and plugins for scalable, easy-to-manage websites.</p>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg animate-slide-up" style="animation-delay: 0.4s">
+                    <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-2xl text-crimson"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Frontend Coding</h3>
+                    <p class="text-text-gray">Implementing pixel-perfect designs with HTML, CSS, JavaScript and modern frameworks.</p>
+                </div>
+                
+                <!-- Skill 5 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg animate-slide-up" style="animation-delay: 0.5s">
+                    <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center mb-6">
+                        <i class="fas fa-bullhorn text-2xl text-crimson"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Branding</h3>
+                    <p class="text-text-gray">Developing cohesive brand identities that communicate your values and connect with your audience.</p>
+                </div>
+                
+                <!-- Skill 6 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg animate-slide-up" style="animation-delay: 0.6s">
+                    <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-2xl text-crimson"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Website Optimization</h3>
+                    <p class="text-text-gray">Improving site speed, SEO, and performance for better user experience and higher rankings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-slide-up">Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-up" style="animation-delay: 0.1s">
+                    <div class="text-4xl mb-6 text-crimson">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Business Websites</h3>
+                    <p class="text-text-gray">Professional corporate websites that establish credibility and drive growth.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-up" style="animation-delay: 0.2s">
+                    <div class="text-4xl mb-6 text-crimson">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">E-Commerce Websites</h3>
+                    <p class="text-text-gray">Feature-rich online stores with secure payment integration and inventory management.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-up" style="animation-delay: 0.3s">
+                    <div class="text-4xl mb-6 text-crimson">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Portfolio Websites</h3>
+                    <p class="text-text-gray">Showcase your work with stunning, visually-focused portfolio sites.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-up" style="animation-delay: 0.4s">
+                    <div class="text-4xl mb-6 text-crimson">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Landing Pages</h3>
+                    <p class="text-text-gray">High-converting landing pages designed to capture leads and drive sales.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+                <!-- Service 5 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-up" style="animation-delay: 0.5s">
+                    <div class="text-4xl mb-6 text-crimson">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Website Redesign</h3>
+                    <p class="text-text-gray">Modernizing outdated websites with fresh designs and improved functionality.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-up" style="animation-delay: 0.6s">
+                    <div class="text-4xl mb-6 text-crimson">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Speed Optimization</h3>
+                    <p class="text-text-gray">Improving website loading times for better SEO and user experience.</p>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-up" style="animation-delay: 0.7s">
+                    <div class="text-4xl mb-6 text-crimson">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Logo Design</h3>
+                    <p class="text-text-gray">Creating unique, memorable logos that represent your brand identity.</p>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100 animate-slide-up" style="animation-delay: 0.8s">
+                    <div class="text-4xl mb-6 text-crimson">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Website Maintenance</h3>
+                    <p class="text-text-gray">Ongoing support, updates, and security monitoring for your website.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<section class="py-16 bg-gray-50 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <h2 class="text-3xl font-bold text-center mb-10">
+      What Clients Say
+    </h2>
+
+    <div class="relative">
+      
+      <div id="testimonialSlider" 
+           class="flex gap-6 transition-transform duration-700 ease-in-out">
+        
+        <!-- Slide 1 -->
+        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%]">
+          <div class="bg-white rounded-2xl shadow-lg p-6">
+            <img src="clients/1.jpeg" 
+                 alt="Google Review"
+                 class="rounded-lg w-full">
+          </div>
+        </div>
+
+        <!-- Duplicate slides for infinite effect -->
+        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%]">
+          <div class="bg-white rounded-2xl shadow-lg p-6">
+            <img src="clients/2.jpeg" 
+                 alt="Google Review"
+                 class="rounded-lg w-full">
+          </div>
+        </div>
+
+        <div class="min-w-full md:min-w-[50%] lg:min-w-[33.33%]">
+          <div class="bg-white rounded-2xl shadow-lg p-6">
+            <img src="clients/3.jpeg" 
+                 alt="Google Review"
+                 class="rounded-lg w-full">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Work Process -->
+    <section class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-slide-up">Work Process</h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="process-step text-center animate-slide-up" style="animation-delay: 0.1s">
+                        <div class="w-20 h-20 rounded-full bg-crimson text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                        <h3 class="text-2xl font-bold mb-4">Client Discovery Call</h3>
+                        <p class="text-text-gray">Understanding your requirements, goals, and vision for the project.</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="process-step text-center animate-slide-up" style="animation-delay: 0.3s">
+                        <div class="w-20 h-20 rounded-full bg-crimson text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                        <h3 class="text-2xl font-bold mb-4">Research & Strategy</h3>
+                        <p class="text-text-gray">Planning the structure, design approach, and technical implementation.</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="process-step text-center animate-slide-up" style="animation-delay: 0.5s">
+                        <div class="w-20 h-20 rounded-full bg-crimson text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                        <h3 class="text-2xl font-bold mb-4">First Draft & Revisions</h3>
+                        <p class="text-text-gray">Creating the initial design and incorporating feedback through iterations.</p>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="process-step text-center animate-slide-up" style="animation-delay: 0.7s">
+                        <div class="w-20 h-20 rounded-full bg-crimson text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">4</div>
+                        <h3 class="text-2xl font-bold mb-4">Final Delivery & Support</h3>
+                        <p class="text-text-gray">Launching the website and providing ongoing maintenance and support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Contact Section -->
+<section id="contact" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Create Something Amazing</h2>
+                <p class="text-gray-600 mb-10 text-lg">Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can work together.</p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center mr-4">
+                            <i data-lucide="mail" class="h-5 w-5 text-[#DC2626]"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold mb-1">Email</h4>
+                            <p class="text-gray-600">muaazshaikh7000@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center mr-4">
+                            <i data-lucide="phone" class="h-5 w-5 text-[#DC2626]"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold mb-1">Phone No</h4>
+                            <p class="text-gray-600">+91 9265003231</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center mr-4">
+                            <i data-lucide="clock" class="h-5 w-5 text-[#DC2626]"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold mb-1">Response Time</h4>
+                            <p class="text-gray-600">Typically within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center mr-4">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-[#DC2626]"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold mb-1">Location</h4>
+                            <p class="text-gray-600">Available for remote work worldwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fade-in stagger-1">
+                <form id="contact-form" action="https://formspree.io/f/xgowjlqj" method="POST" class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                        <input type="text" name="name" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#DC2626] focus:ring-1 focus:ring-[#DC2626] transition-colors" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                        <input type="email" name="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#DC2626] focus:ring-1 focus:ring-[#DC2626] transition-colors" placeholder="hello@example.com" required>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">Phone No</label>
+                        <input type="tel" name="phone" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#DC2626] focus:ring-1 focus:ring-[#DC2626] transition-colors" placeholder="Your Phone No" required>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Project Details</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-[#DC2626] focus:ring-1 focus:ring-[#DC2626] transition-colors" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-[#DC2626] hover:bg-[#B91C1C] text-white font-medium py-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02]">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<a href="https://wa.me/919265003231?text=Hello%20I%20am%20interested%20in%20your%20website%20design%20services"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+
+
+<!-- Footer -->
+<footer class="bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <!-- Services Column -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">Services</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-600 hover:text-[#DC2626] transition-colors">Business Websites
+</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-[#DC2626] transition-colors">E-Commerce Websites
+</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-[#DC2626] transition-colors">Portfolio Websites
+</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-[#DC2626] transition-colors">Landing Pages
+</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-[#DC2626] transition-colors">Website Redesign
+</a></li>
+ <li><a href="#" class="text-gray-600 hover:text-[#DC2626] transition-colors">Logo Design
+
+
+</a></li>
+ <li><a href="#" class="text-gray-600 hover:text-[#DC2626] transition-colors">Website Maintenance
+</a></li>
+
+                </ul>
+            </div>
+            
+            <!-- Links Column -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="#portfolio" class="text-gray-600 hover:text-[#DC2626] transition-colors">Portfolio</a></li>
+                    <li><a href="#services" class="text-gray-600 hover:text-[#DC2626] transition-colors">Services</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-[#DC2626] transition-colors">About</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-[#DC2626] transition-colors">Contact</a></li>
+                    <li><a href="#skills" class="text-gray-600 hover:text-[#DC2626] transition-colors">Skills</a></li>
+                    <li><a href="#testimonials" class="text-gray-600 hover:text-[#DC2626] transition-colors">Testimonials</a></li>
+
+                </ul>
+            </div>
+            
+            <!-- Social Column -->
+            <div>
+                <h4 class="text-lg font-bold mb-6">Connect</h4>
+                <p class="text-gray-600 mb-6">Follow my latest work and design insights on social media.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/share/v/19snP6VmCy/
+" class="h-10 w-10 rounded-full bg-gray-100 hover:bg-red-50 flex items-center justify-center transition-colors">
+                        <i data-lucide="facebook" class="h-5 w-5 text-gray-700"></i>
+                    </a>
+                   
+                    <a href="#" class="h-10 w-10 rounded-full bg-gray-100 hover:bg-red-50 flex items-center justify-center transition-colors">
+                        <i data-lucide="instagram" class="h-5 w-5 text-gray-700"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 rounded-full bg-gray-100 hover:bg-red-50 flex items-center justify-center transition-colors">
+                        <i data-lucide="twitter" class="h-5 w-5 text-gray-700"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 rounded-full bg-gray-100 hover:bg-red-50 flex items-center justify-center transition-colors">
+                        <i data-lucide="linkedin" class="h-5 w-5 text-gray-700"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pt-8 border-t border-gray-100 text-center">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="h-6 w-6 rounded-md bg-[#DC2626] flex items-center justify-center">
+                        <i data-lucide="brush" class="text-white h-3.5 w-3.5"></i>
+                    </div>
+                    <span class="text-lg font-bold text-black">MuaazShaikh</span>
+                </div>
+                
+                <p class="text-gray-600">
+                    © 2024 MuaazShaikh • Let's create something amazing
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = this.querySelector('i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            
+            lucide.createIcons();
+        });
+        
+    
+         
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const mobileMenuButton = document.getElementById('mobile-menu-button');
+                    
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        icon.setAttribute('data-lucide', 'menu');
+                        lucide.createIcons();
+                    }
+                    
+                    // Scroll to element
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.animationPlayState = 'running';
+                }
+            });
+        }
+        
+        // Initial check on page load
+        window.addEventListener('load', animateOnScroll);
+        
+        // Check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Hire Me button click
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Hire Me')) {
+                button.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: document.getElementById('contact').offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+    <script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Person",
+ "name":"Muaaz Shaikh",
+ "jobTitle":"Freelance Web Designer & Developer",
+ "url":"https://muaaz1703.github.io/portfolio/",
+ "address":{"@type":"PostalAddress","addressCountry":"India"}
+}
+</script>
+<script>
+const slider = document.getElementById("testimonialSlider");
+
+let scrollAmount = 0;
+const slideWidth = slider.children[0].offsetWidth + 24; // 24 = gap-6
+const totalSlides = slider.children.length;
+
+function autoScroll() {
+  scrollAmount += slideWidth;
+
+  if (scrollAmount >= slideWidth * totalSlides) {
+    scrollAmount = 0;
+  }
+
+  slider.style.transform = `translateX(-${scrollAmount}px)`;
+}
+
+let autoSlide = setInterval(autoScroll, 3000);
+
+// Pause on hover
+slider.addEventListener("mouseenter", () => {
+  clearInterval(autoSlide);
+});
+
+slider.addEventListener("mouseleave", () => {
+  autoSlide = setInterval(autoScroll, 3000);
+});
+</script>
+
+
+</body>
+</html>
