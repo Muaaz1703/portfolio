@@ -230,76 +230,281 @@
 
 
 
-.footer {
-  background: #111;
-  color: #fff;
-  padding: 40px 20px 10px;
-  font-family: Arial, sans-serif;
-}
+    /* ---------- FOOTER MAIN STYLES (fully responsive) ---------- */
+    .footer {
+      background: linear-gradient(135deg, #0b1120 0%, #111827 100%);
+      color: #e2e8f0;
+      width: 100%;
+      margin-top: auto;
+      border-top: 1px solid rgba(71, 85, 105, 0.5);
+    }
 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 3rem 2rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
-.footer-col h2,
-.footer-col h3 {
-  margin-bottom: 15px;
-}
+    /* each column — flexible, responsive basis */
+    .footer-col {
+      flex: 1 1 260px;
+      min-width: 180px;
+    }
 
-.footer-col p,
-.footer-col a {
-  color: #ccc;
-  font-size: 14px;
-  text-decoration: none;
-}
+    /* logo area */
+    .logo {
+      margin-bottom: 1rem;
+    }
 
-.footer-col a:hover {
-  color: #ff4d4d;
-}
+    .logo img {
+      max-width: 160px;
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+      transition: transform 0.2s ease;
+    }
 
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
+    .logo img:hover {
+      transform: scale(1.02);
+    }
 
-.footer-col ul li {
-  margin-bottom: 8px;
-}
+    .footer-col p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0.75rem 0 1rem;
+      color: #cbd5e6;
+      font-weight: 400;
+    }
 
-.socials a {
-  display: block;
-  margin-bottom: 8px;
-}
+    /* headings */
+    .footer-col h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      margin-bottom: 1.25rem;
+      color: #ffffff;
+      position: relative;
+      display: inline-block;
+    }
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #333;
-  margin-top: 20px;
-  padding-top: 10px;
-  font-size: 13px;
-  color: #aaa;
-}
+    .footer-col h3:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 36px;
+      height: 2px;
+      background: #3b82f6;
+      border-radius: 4px;
+    }
 
-/* 📱 Responsive */
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    /* lists (quick links & contact) */
+    .footer-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-@media (max-width: 500px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+    .footer-col ul li {
+      margin-bottom: 0.85rem;
+      line-height: 1.4;
+    }
 
-  .socials a {
-    display: inline-block;
-    margin: 5px;
-  }
-}
+    .footer-col ul li a {
+      color: #cbd5e6;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-col ul li a:hover {
+      color: #60a5fa;
+      transform: translateX(4px);
+    }
+
+    /* contact list specific (icons) */
+    .contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: #cbd5e6;
+      flex-wrap: wrap;
+      word-break: break-word;
+    }
+
+    .contact li i {
+      width: 1.4rem;
+      font-size: 1rem;
+      margin-top: 0.1rem;
+      color: #60a5fa;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .contact li a {
+      color: #cbd5e6;
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.2s;
+    }
+
+    .contact li a:hover {
+      color: #60a5fa;
+      text-decoration: underline;
+    }
+
+    /* social icons container */
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      color: #e2e8f0;
+      font-size: 1.1rem;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      backdrop-filter: blur(2px);
+    }
+
+    .social-icons a:hover {
+      background: #3b82f6;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(59,130,246,0.3);
+    }
+
+    /* footer bottom bar */
+    .footer-bottom {
+      text-align: center;
+      padding: 1.5rem 1.5rem;
+      border-top: 1px solid rgba(71, 85, 105, 0.5);
+      font-size: 0.85rem;
+      color: #94a3b8;
+      background: rgba(0, 0, 0, 0.2);
+      letter-spacing: 0.3px;
+    }
+
+    /* ========== RESPONSIVE BREAKPOINTS ========== */
+    /* Tablet and smaller screens: flexible column stacking */
+    @media (max-width: 900px) {
+      .footer-container {
+        gap: 2rem;
+        padding: 2.5rem 1.8rem 1.8rem;
+      }
+      .footer-col {
+        flex: 1 1 240px;
+      }
+    }
+
+    /* Mobile landscape & portrait: full stack, center alignment optional */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1.5rem 1.8rem;
+      }
+      
+      .footer-col {
+        width: 100%;
+        flex: auto;
+      }
+      
+      .footer-col h3:after {
+        width: 44px;
+      }
+      
+      .social-icons {
+        justify-content: flex-start;
+      }
+      
+      .contact li {
+        flex-wrap: wrap;
+      }
+      
+      /* better touch targets */
+      .social-icons a {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+      }
+      
+      .footer-col ul li a {
+        padding: 0.2rem 0;
+      }
+    }
+
+    /* small phones (<= 480px) */
+    @media (max-width: 480px) {
+      .footer-container {
+        padding: 1.8rem 1.2rem 1.5rem;
+        gap: 1.8rem;
+      }
+      
+      .footer-col h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .footer-col p, 
+      .footer-col ul li,
+      .contact li {
+        font-size: 0.88rem;
+      }
+      
+      .logo img {
+        max-width: 130px;
+      }
+      
+      .footer-bottom {
+        font-size: 0.75rem;
+        padding: 1rem;
+      }
+      
+      .contact li i {
+        width: 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ensure email/phone links don't overflow on narrow screens */
+    .contact li a {
+      display: inline-block;
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+
+    /* focus ring for accessibility */
+    a:focus-visible,
+    .social-icons a:focus-visible {
+      outline: 2px solid #60a5fa;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    /* subtle hover for quick links list items */
+    .footer-col ul li {
+      transition: transform 0.1s;
+    }
     </style>
 </head>
 
@@ -1019,50 +1224,60 @@ Elementor</span>
 
 
 
-<footer class="footer">
-  <div class="footer-container">
-    
-    <!-- Column 1 -->
-    <div class="footer-col">
-      <h2 class="logo">Muaaz Electronics</h2>
-      <p>Your trusted store for quality electronics and gadgets.</p>
-    </div>
 
-    <!-- Column 2 -->
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
 
-    <!-- Column 3 -->
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <p>Email: support@muaaz.com</p>
-      <p>Phone: +91 98765 43210</p>
-    </div>
+  <!-- FOOTER SECTION - fully responsive for all devices -->
+  <footer class="footer">
+    <div class="footer-container">
 
-    <!-- Column 4 -->
-    <div class="footer-col">
-      <h3>Follow Us</h3>
-      <div class="socials">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">WhatsApp</a>
+      <!-- Column 1 - Brand & Social -->
+      <div class="footer-col">
+        <div class="logo">
+          <!-- Logo image: responsive sizing applied in CSS -->
+          <img src="images/ms-logo-2.png" alt="Muaaz Shaikh brand logo">
+        </div>
+        <p>Let's Create Something Amazing</p>
+        <div class="social-icons">
+          <!-- Facebook link as per original, enhanced with target & rel for security -->
+          <a href="https://www.facebook.com/share/v/19snP6VmCy/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <!-- (additional icons can be added here while maintaining responsive layout) -->
+        </div>
       </div>
+
+      <!-- Column 2 - Quick Links (navigation) -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#Home">🏠 Home</a></li>
+          <li><a href="#portfolio">📁 Portfolio</a></li>
+          <li><a href="#about">👤 About</a></li>
+          <li><a href="#services">⚙️ Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 - Contact Details (get in touch) -->
+      <div class="footer-col">
+        <h3>Get In Touch</h3>
+        <ul class="contact">
+          <li><i class="fas fa-map-marker-alt"></i> Surat, India - 395003</li>
+          <li><i class="fas fa-phone-alt"></i> 
+            <a href="tel:+919265003231">+91 9265003231</a>
+          </li>
+          <li><i class="fas fa-envelope"></i> 
+            <a href="mailto:muaazshaikh7000@gmail.com">muaazshaikh7000@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
 
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2026 Muaaz Electronics. All rights reserved.</p>
-  </div>
-</footer>
-
+    <!-- Bottom copyright row -->
+    <div class="footer-bottom">
+      © 2024 MuaazShaikh • All Rights Reserved
+    </div>
+  </footer>
 
 
 
