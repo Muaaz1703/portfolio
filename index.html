@@ -231,10 +231,10 @@
 
 
 
-        .footer {
+      .footer {
   background: #111;
   color: #fff;
-  padding: 60px 20px;
+  padding: 60px 20px 20px;
 }
 
 .footer-container {
@@ -246,11 +246,13 @@
   flex-wrap: wrap;
 }
 
+/* Columns */
 .footer-col {
   flex: 1;
   min-width: 250px;
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -267,20 +269,24 @@
 }
 
 .logo span {
+  display: block;
   font-size: 14px;
   letter-spacing: 2px;
 }
 
+/* Text */
 .footer-col p {
   margin: 15px 0;
   color: #bbb;
   font-size: 14px;
 }
 
+/* Headings */
 .footer-col h3 {
   margin-bottom: 15px;
 }
 
+/* Links */
 .footer-col ul {
   list-style: none;
   padding: 0;
@@ -288,7 +294,6 @@
 
 .footer-col ul li {
   margin-bottom: 10px;
-  color: #bbb;
   font-size: 14px;
 }
 
@@ -301,11 +306,12 @@
   color: #fff;
 }
 
-/* Social Icons */
-.social-icons {
-  margin-top: 15px;
+/* Contact icons spacing */
+.contact i {
+  margin-right: 8px;
 }
 
+/* Social */
 .social-icons a {
   display: inline-block;
   margin-right: 10px;
@@ -323,7 +329,17 @@
   background: #ff4d4d;
 }
 
-/* Responsive */
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #222;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* 🔥 RESPONSIVE */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -335,7 +351,7 @@
   }
 
   .social-icons {
-    justify-content: center;
+    margin-top: 10px;
   }
 }
     </style>
@@ -1065,13 +1081,14 @@ Elementor</span>
     <div class="footer-col">
       <div class="logo">
         <img src="images/ms-logo-2.png" alt="Logo">
-        <h2>Muaaz<br><h2>Shaikh</h2></h2>
+        <h2>Muaaz <span>Shaikh</span></h2>
       </div>
       <p>Let's Create Something Amazing</p>
 
       <div class="social-icons">
-        <a href="https://www.facebook.com/share/v/19snP6VmCy/"><i class="fab fa-facebook-f"></i></a>
-
+        <a href="https://www.facebook.com/share/v/19snP6VmCy/">
+          <i class="fab fa-facebook-f"></i>
+        </a>
       </div>
     </div>
 
@@ -1083,7 +1100,6 @@ Elementor</span>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-         
       </ul>
     </div>
 
@@ -1092,22 +1108,22 @@ Elementor</span>
       <h3>Get In Touch</h3>
       <ul class="contact">
         <li><i class="fas fa-map-marker-alt"></i> Surat, India - 395003</li>
-       <li><i class="fas fa-phone-alt"></i> <a href="tel:+919265003231">+91 9265003231</a></li>
-       <li> <i class="fas fa-envelope"></i>  <a href="mailto:muaazshaikh7000@gmail.com">muaazshaikh7000@gmail.com</a></li>
+        <li><i class="fas fa-phone-alt"></i> 
+          <a href="tel:+919265003231">+91 9265003231</a>
+        </li>
+        <li><i class="fas fa-envelope"></i> 
+          <a href="mailto:muaazshaikh7000@gmail.com">muaazshaikh7000@gmail.com</a>
+        </li>
       </ul>
     </div>
 
   </div>
 
-    
-<br>
-    <br>
- 
-  <div class="col p-3 text-white text-center">  © 2024 MuaazShaikh • All Rights Reserved</div>
-
-    
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    © 2024 MuaazShaikh • All Rights Reserved
+  </div>
 </footer>
-
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
