@@ -506,6 +506,81 @@
       transition: transform 0.1s;
     }
     </style>
+        <style>
+        
+     
+        /* fade-in animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+        }
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .stagger-1 { animation-delay: 0.05s; }
+        .stagger-2 { animation-delay: 0.15s; }
+        .stagger-3 { animation-delay: 0.25s; }
+        .stagger-4 { animation-delay: 0.35s; }
+        .stagger-5 { animation-delay: 0.45s; }
+
+        /* custom card hover effects */
+        .project-card {
+            transition: transform 0.35s ease, box-shadow 0.4s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+        }
+        .image-overlay {
+            transition: opacity 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.3s ease;
+        }
+        .group:hover .image-overlay {
+            opacity: 1;
+        }
+        .project-img {
+            transition: transform 0.6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+        .group:hover .project-img {
+            transform: scale(1.05);
+        }
+        /* custom focus ring for accessibility */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #DC2626;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        /* truncate lines for consistent card height */
+        .desc-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .badge-tech {
+            background: #fef2f2;
+            color: #b91c1c;
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            letter-spacing: -0.01em;
+            transition: all 0.2s;
+        }
+        .project-card:hover .badge-tech {
+            background: #fee2e2;
+        }
+        /* Responsive image handling */
+        .img-placeholder-fallback {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+    </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 
@@ -611,181 +686,237 @@
 
 
 
-    <!-- Project Showcase -->
-    <section id="portfolio" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">A selection of recent work that showcases my design process and creative solutions</p>
+        <!-- Project Showcase - Professional Redesign -->
+    <section id="portfolio" class="py-20 md:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <!-- Section header with refined spacing -->
+            <div class="text-center mb-16 md:mb-20 fade-in">
+                <span class="inline-block text-[#DC2626] font-semibold text-sm uppercase tracking-wider mb-3 bg-red-50 px-4 py-1 rounded-full">Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-5">Featured Projects</h2>
+                <div class="w-20 h-1 bg-[#DC2626] rounded-full mx-auto mb-5"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">A curated selection of modern web experiences — blending creative design with high-performance engineering.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
-
-
-                <!-- Project 1 -->
-<div class="project-card group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 fade-in stagger-1">
-    <div class="h-80 overflow-hidden">
-        <img src="images/fashions.png" 
-             alt="Brand Identity Design">
-    </div>
-    
-    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/90 to-transparent opacity-0 transition-all duration-500 flex flex-col justify-end p-8">
-        <span class="text-red-300 text-sm font-medium mb-2">React.js,Next.js,Tailwind CSS </span>
-       
-
-        <h3 class="text-2xl font-bold text-white mb-2">Helly Fashion – Women’s Clothing E-commerce Website</h3>
-        <p class="text-gray-200 mb-6">Designed and developed a stylish women’s fashion website for a Surat-based clothing brand. Built with React.js / Next.js and Tailwind CSS, focusing on elegant design, fast loading speed, and seamless user experience.</p>
-        <a href="https://helly-fashion-womens-clothing.vercel.app" class="text-white font-medium inline-flex items-center">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-    
-    <div class="bg-white p-6">
-        <h3 class="text-xl font-bold mb-2">Helly Fashion – Women’s Clothing E-commerce Website</h3>
-        <p class="text-gray-600 mb-4">Designed and developed a stylish women’s fashion website for a Surat-based clothing brand. Built with React.js / Next.js and Tailwind CSS, focusing on elegant design, fast loading speed, and seamless user experience.</p>
-        <a href="https://helly-fashion-womens-clothing.vercel.app" class="text-[#DC2626] font-medium inline-flex items-center hover:text-[#B91C1C]">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-</div>
-
-
-
+            <!-- Responsive grid: 1 / 2 / 3 columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
                 
+                <!-- 1. Helly Fashion – Women's E‑commerce -->
+                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-1 flex flex-col">
+                    <!-- Image container with overlay effect -->
+                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
+                        <img src="images/fashions.png" 
+                             alt="Helly Fashion e-commerce website mockup – modern women's clothing store"
+                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/FFF5F5/DC2626?text=Helly+Fashion';">
+                        <!-- Interactive overlay with gradient and CTA button -->
+                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
+                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Live Project</span>
+                                <a href="https://helly-fashion-womens-clothing.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
+                                    Explore Website <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card content (clean, accessible) -->
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">React.js</span>
+                            <span class="badge-tech">Next.js</span>
+                            <span class="badge-tech">Tailwind CSS</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">Helly Fashion – Women's Clothing E‑commerce</h3>
+                        <p class="text-gray-500 text-sm mb-4 desc-clamp">Elegant, fast-loading fashion store for a Surat-based brand. Built with Next.js and Tailwind CSS for a seamless shopping experience.</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between">
+                            <a href="https://helly-fashion-womens-clothing.vercel.app" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">E‑commerce</span>
+                        </div>
+                    </div>
+                </div>
                 
-<!-- Project 1 -->
-<div class="project-card group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 fade-in stagger-1">
-    <div class="h-80 overflow-hidden">
-        <img src="images/webnova.png" 
-             alt="Brand Identity Design" class="">
-    </div>
-    
-    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/90 to-transparent opacity-0 transition-all duration-500 flex flex-col justify-end p-8">
-        <span class="text-red-300 text-sm font-medium mb-2">Wordpress</span>
-        <h3 class="text-2xl font-bold text-white mb-2">WebNova Agency</h3>
-        <p class="text-gray-200 mb-6">High-performance WordPress websites with professional design and optimization.</p>
-        <a href="http://digitalagency17.free.nf/" class="text-white font-medium inline-flex items-center">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-    
-    <div class="bg-white p-6">
-        <h3 class="text-xl font-bold mb-2">WebNova Agency</h3>
-        <p class="text-gray-600 mb-4">High-performance WordPress websites with professional design and optimization.</p>
-        <a href="http://digitalagency17.free.nf/" class="text-[#DC2626] font-medium inline-flex items-center hover:text-[#B91C1C]">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-</div>
-
-
-
-
- <!-- Project 2 -->
-<div class="project-card group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 fade-in stagger-2">
-    <div class="h-80 overflow-hidden">
-        <img src="images/arabia.png" 
-             alt="Mobile App UI Design" class="">
-    </div>
-
-    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/90 to-transparent opacity-0 transition-all duration-500 flex flex-col justify-end p-8">
-        <span class="text-red-300 text-sm font-medium mb-2">React.js,Next.js,Tailwind CSS </span>
-        <h3 class="text-2xl font-bold text-white mb-2">Royal Arabia – Multi Cuisine Restaurant Website</h3>
-        <p class="text-gray-200 mb-6">Premium restaurant website with luxury dark theme design.</p>
-        <a href="https://royal-arabia.vercel.app/" class="text-white font-medium inline-flex items-center">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-
-    <div class="bg-white p-6">
-        <h3 class="text-xl font-bold mb-2">Royal Arabia – Multi Cuisine Restaurant Website</h3>
-        <p class="text-gray-600 mb-4">Premium restaurant website with luxury dark theme design.</p>
-        <a href="https://royal-arabia.vercel.app/" class="text-[#DC2626] font-medium inline-flex items-center hover:text-[#B91C1C]">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-</div>
-
-
+                <!-- 2. WebNova Agency – WordPress high-performance -->
+                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-2 flex flex-col">
+                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
+                        <img src="images/webnova.png" 
+                             alt="WebNova Agency – modern digital agency website preview"
+                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/1e293b/ffffff?text=WebNova+Agency';">
+                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
+                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">WordPress</span>
+                                <a href="http://digitalagency17.free.nf/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
+                                    Visit Site <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">WordPress</span>
+                            <span class="badge-tech">Elementor</span>
+                            <span class="badge-tech">SEO Optimized</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">WebNova Agency</h3>
+                        <p class="text-gray-500 text-sm mb-4 desc-clamp">High-performance WordPress website with professional design, speed optimization and modern UI/UX for a digital agency.</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between">
+                            <a href="http://digitalagency17.free.nf/" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">Agency</span>
+                        </div>
+                    </div>
+                </div>
                 
-
-   <!-- Project 3 -->
-<div class="project-card group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 fade-in stagger-3">
-    <div class="h-80 overflow-hidden">
-        <img src="images/shop.png" 
-             alt="E-commerce Website" class="">
-    </div>
-
-    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/90 to-transparent opacity-0 transition-all duration-500 flex flex-col justify-end p-8">
-        <span class="text-red-300 text-sm font-medium mb-2">WordPress,
-WooCommerce,
-Elementor</span>
-        <h3 class="text-2xl font-bold text-white mb-2">EaseShop</h3>
-        <p class="text-gray-200 mb-6">Modern responsive eCommerce website built with WordPress and WooCommerce.</p>
-        <a href="http://easeshop.free.nf/" class="text-white font-medium inline-flex items-center">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-
-    <div class="bg-white p-6">
-        <h3 class="text-xl font-bold mb-2">EaseShop</h3>
-        <p class="text-gray-600 mb-4">Modern responsive eCommerce website built with WordPress and WooCommerce.</p>
-        <a href="http://easeshop.free.nf/" class="text-[#DC2626] font-medium inline-flex items-center hover:text-[#B91C1C]">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-</div>
-
-
-
-
-
-                <!-- Project 4 -->
-<div class="project-card group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 fade-in stagger-1">
-    <div class="h-80 overflow-hidden">
-        <img src="images/admin.png" 
-             alt="Brand Identity Design" class="">
-    </div>
-    
-    <div class="project-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/90 to-transparent opacity-0 transition-all duration-500 flex flex-col justify-end p-8">
-        <span class="text-red-300 text-sm font-medium mb-2">Bootstrap 5,React.js,Next.js,Tailwind CSS</span>
-       
-
-        <h3 class="text-2xl font-bold text-white mb-2">Bootstrap 5 Admin Dashboard – Analytics & Management Panel</h3>
-        <p class="text-gray-200 mb-6">A modern and responsive admin dashboard designed for managing data, users, and analytics in a centralized interface. Built with React.js / Next.js and Tailwind CSS, the dashboard features clean UI components, data visualization, and an intuitive layout for efficient workflow management.</p>
-        <a href="https://admin-dashboard-three-ecru-14.vercel.app/" class="text-white font-medium inline-flex items-center">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-    
-    <div class="bg-white p-6">
-        <h3 class="text-xl font-bold mb-2">Bootstrap 5 Admin Dashboard – Analytics & Management Panel</h3>
-        <p class="text-gray-600 mb-4">A modern and responsive admin dashboard designed for managing data, users, and analytics in a centralized interface. Built with React.js / Next.js and Tailwind CSS, the dashboard features clean UI components, data visualization, and an intuitive layout for efficient workflow management.</p>
-        <a href="https://admin-dashboard-three-ecru-14.vercel.app/" class="text-[#DC2626] font-medium inline-flex items-center hover:text-[#B91C1C]">
-            View Case Study <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-        </a>
-    </div>
-</div>
-
+                <!-- 3. Royal Arabia – Multi Cuisine Restaurant -->
+                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-3 flex flex-col">
+                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
+                        <img src="images/arabia.png" 
+                             alt="Royal Arabia restaurant website – luxury dark theme design"
+                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/1e1b2f/D4AF37?text=Royal+Arabia';">
+                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
+                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Fine Dining</span>
+                                <a href="https://royal-arabia.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
+                                    Live Demo <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">React.js</span>
+                            <span class="badge-tech">Next.js</span>
+                            <span class="badge-tech">Tailwind CSS</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">Royal Arabia – Multi Cuisine Restaurant</h3>
+                        <p class="text-gray-500 text-sm mb-4 desc-clamp">Premium restaurant website featuring a luxury dark theme, interactive menu, and smooth reservations experience.</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between">
+                            <a href="https://royal-arabia.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">Restaurant</span>
+                        </div>
+                    </div>
+                </div>
                 
+                <!-- 4. EaseShop – Modern WooCommerce Store -->
+                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-4 flex flex-col">
+                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
+                        <img src="images/shop.png" 
+                             alt="EaseShop ecommerce store – responsive WooCommerce design"
+                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/2C3E50/F39C12?text=EaseShop';">
+                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
+                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">WooCommerce</span>
+                                <a href="http://easeshop.free.nf/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
+                                    Visit Store <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">WordPress</span>
+                            <span class="badge-tech">WooCommerce</span>
+                            <span class="badge-tech">Elementor</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">EaseShop</h3>
+                        <p class="text-gray-500 text-sm mb-4 desc-clamp">Modern, fully responsive eCommerce website built with WordPress & WooCommerce, featuring product filters and smooth checkout.</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between">
+                            <a href="http://easeshop.free.nf/" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">eCommerce</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. Bootstrap 5 Admin Dashboard – Analytics Panel -->
+                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-5 flex flex-col">
+                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
+                        <img src="images/admin.png" 
+                             alt="Bootstrap 5 Admin Dashboard – analytics dashboard preview"
+                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/0f172a/38bdf8?text=Admin+Dashboard';">
+                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
+                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Admin Panel</span>
+                                <a href="https://admin-dashboard-three-ecru-14.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
+                                    Preview Dashboard <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="badge-tech">Bootstrap 5</span>
+                            <span class="badge-tech">React.js</span>
+                            <span class="badge-tech">Next.js</span>
+                            <span class="badge-tech">Tailwind CSS</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">Bootstrap 5 Admin Dashboard – Analytics & Management</h3>
+                        <p class="text-gray-500 text-sm mb-4 desc-clamp">Modern admin panel with data visualization, user management, and analytics widgets. Built with React & Tailwind for efficient workflow.</p>
+                        <div class="mt-auto pt-3 flex items-center justify-between">
+                            <a href="https://admin-dashboard-three-ecru-14.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
+                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">Dashboard</span>
+                        </div>
+                    </div>
+                </div>
 
-
-
-                <!-- Project 4 -->
-                                
-                <!-- Project 5 -->
-                               
-                <!-- Project 6 -->
-
-
-                           </div>
+                <!-- Extra call-to-action or optional sixth project area (maintained clean grid) 
+                     Could be extended but we keep professional layout with 5 strong projects -->
+            </div>
             
-            
+            <!-- Optional: subtle CTA link to full portfolio -->
+            <div class="text-center mt-16 fade-in" style="animation-delay: 0.4s;">
+                <a href="#contact" class="inline-flex items-center gap-2 border border-[#DC2626] text-[#DC2626] hover:bg-[#DC2626] hover:text-white transition-all duration-300 font-medium px-6 py-3 rounded-full text-sm shadow-sm">
+                    Explore all projects <i data-lucide="folder-git" class="w-4 h-4"></i>
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- Initialize Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                // fallback in case lucide loads slowly
+                window.addEventListener('load', function() {
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+            }
+        });
+    </script>
+    <!-- small extra style for lucide icons inline -->
+    <style>
+        [data-lucide] {
+            display: inline-block;
+            width: 1.2em;
+            height: 1.2em;
+            stroke-width: 1.75;
+            vertical-align: middle;
+        }
+        .group/link:hover [data-lucide="arrow-right"] {
+            transform: translateX(2px);
+        }
+        .project-card .image-overlay {
+            backdrop-filter: blur(2px);
+        }
+        @media (max-width: 640px) {
+            .project-card .image-overlay a {
+                font-size: 0.75rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
 
 
 
