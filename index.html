@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -505,79 +506,200 @@
     .footer-col ul li {
       transition: transform 0.1s;
     }
+
+        
     </style>
         <style>
         
-     
-        /* fade-in animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
-        }
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .stagger-1 { animation-delay: 0.05s; }
-        .stagger-2 { animation-delay: 0.15s; }
-        .stagger-3 { animation-delay: 0.25s; }
-        .stagger-4 { animation-delay: 0.35s; }
-        .stagger-5 { animation-delay: 0.45s; }
+.projects-section {
+  background: #0f0f10;
+  color: #fff;
+}
 
-        /* custom card hover effects */
-        .project-card {
-            transition: transform 0.35s ease, box-shadow 0.4s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
-        }
-        .image-overlay {
-            transition: opacity 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.3s ease;
-        }
-        .group:hover .image-overlay {
-            opacity: 1;
-        }
-        .project-img {
-            transition: transform 0.6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-        }
-        .group:hover .project-img {
-            transform: scale(1.05);
-        }
-        /* custom focus ring for accessibility */
-        a:focus-visible, button:focus-visible {
-            outline: 2px solid #DC2626;
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        /* truncate lines for consistent card height */
-        .desc-clamp {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .badge-tech {
-            background: #fef2f2;
-            color: #b91c1c;
-            font-size: 0.7rem;
-            font-weight: 500;
-            padding: 0.2rem 0.7rem;
-            border-radius: 30px;
-            letter-spacing: -0.01em;
-            transition: all 0.2s;
-        }
-        .project-card:hover .badge-tech {
-            background: #fee2e2;
-        }
-        /* Responsive image handling */
-        .img-placeholder-fallback {
-            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-        }
+.section-tag {
+  display: inline-block;
+  background: rgba(255, 59, 59, 0.12);
+  color: #ff4d4d;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #bdbdbd;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.project-card {
+  background: #181818;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(255, 77, 77, 0.18);
+  border-color: rgba(255, 77, 77, 0.25);
+}
+
+.project-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.08);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.78), rgba(0, 0, 0, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #fff;
+  color: #d60000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.project-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.project-content {
+  padding: 24px;
+}
+
+.project-category {
+  display: inline-block;
+  font-size: 13px;
+  color: #ff4d4d;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.project-desc {
+  color: #bfbfbf;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-tech span {
+  background: rgba(255, 77, 77, 0.1);
+  color: #ff6b6b;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.view-more-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff2d2d, #b30000);
+  color: #fff;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 35px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+}
+
+.view-more-btn:hover {
+  transform: translateY(-3px);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(255, 0, 0, 0.28);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .section-title {
+    font-size: 34px;
+  }
+
+  .project-title {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-section {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+  }
+
+  .project-img {
+    height: 220px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+}
     </style>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -686,201 +808,176 @@
 
 
 
-        <!-- Project Showcase - Professional Redesign -->
-    <section id="portfolio" class="py-20 md:py-28 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <!-- Section header with refined spacing -->
-            <div class="text-center mb-16 md:mb-20 fade-in">
-                <span class="inline-block text-[#DC2626] font-semibold text-sm uppercase tracking-wider mb-3 bg-red-50 px-4 py-1 rounded-full">Portfolio</span>
-                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-5">Featured Projects</h2>
-                <div class="w-20 h-1 bg-[#DC2626] rounded-full mx-auto mb-5"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">A curated selection of modern web experiences — blending creative design with high-performance engineering.</p>
-            </div>
-            
-            <!-- Responsive grid: 1 / 2 / 3 columns -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
-                
-                <!-- 1. Helly Fashion – Women's E‑commerce -->
-                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-1 flex flex-col">
-                    <!-- Image container with overlay effect -->
-                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
-                        <img src="images/fashions.png" 
-                             alt="Helly Fashion e-commerce website mockup – modern women's clothing store"
-                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
-                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/FFF5F5/DC2626?text=Helly+Fashion';">
-                        <!-- Interactive overlay with gradient and CTA button -->
-                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
-                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Live Project</span>
-                                <a href="https://helly-fashion-womens-clothing.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
-                                    Explore Website <i data-lucide="external-link" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card content (clean, accessible) -->
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="badge-tech">React.js</span>
-                            <span class="badge-tech">Next.js</span>
-                            <span class="badge-tech">Tailwind CSS</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">Helly Fashion – Women's Clothing E‑commerce</h3>
-                        <p class="text-gray-500 text-sm mb-4 desc-clamp">Elegant, fast-loading fashion store for a Surat-based brand. Built with Next.js and Tailwind CSS for a seamless shopping experience.</p>
-                        <div class="mt-auto pt-3 flex items-center justify-between">
-                            <a href="https://helly-fashion-womens-clothing.vercel.app" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
-                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
-                            </a>
-                            <span class="text-xs text-gray-400">E‑commerce</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 2. WebNova Agency – WordPress high-performance -->
-                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-2 flex flex-col">
-                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
-                        <img src="images/webnova.png" 
-                             alt="WebNova Agency – modern digital agency website preview"
-                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
-                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/1e293b/ffffff?text=WebNova+Agency';">
-                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
-                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">WordPress</span>
-                                <a href="http://digitalagency17.free.nf/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
-                                    Visit Site <i data-lucide="external-link" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="badge-tech">WordPress</span>
-                            <span class="badge-tech">Elementor</span>
-                            <span class="badge-tech">SEO Optimized</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">WebNova Agency</h3>
-                        <p class="text-gray-500 text-sm mb-4 desc-clamp">High-performance WordPress website with professional design, speed optimization and modern UI/UX for a digital agency.</p>
-                        <div class="mt-auto pt-3 flex items-center justify-between">
-                            <a href="http://digitalagency17.free.nf/" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
-                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
-                            </a>
-                            <span class="text-xs text-gray-400">Agency</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 3. Royal Arabia – Multi Cuisine Restaurant -->
-                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-3 flex flex-col">
-                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
-                        <img src="images/arabia.png" 
-                             alt="Royal Arabia restaurant website – luxury dark theme design"
-                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
-                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/1e1b2f/D4AF37?text=Royal+Arabia';">
-                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
-                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Fine Dining</span>
-                                <a href="https://royal-arabia.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
-                                    Live Demo <i data-lucide="external-link" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="badge-tech">React.js</span>
-                            <span class="badge-tech">Next.js</span>
-                            <span class="badge-tech">Tailwind CSS</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">Royal Arabia – Multi Cuisine Restaurant</h3>
-                        <p class="text-gray-500 text-sm mb-4 desc-clamp">Premium restaurant website featuring a luxury dark theme, interactive menu, and smooth reservations experience.</p>
-                        <div class="mt-auto pt-3 flex items-center justify-between">
-                            <a href="https://royal-arabia.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
-                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
-                            </a>
-                            <span class="text-xs text-gray-400">Restaurant</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 4. EaseShop – Modern WooCommerce Store -->
-                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-4 flex flex-col">
-                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
-                        <img src="images/shop.png" 
-                             alt="EaseShop ecommerce store – responsive WooCommerce design"
-                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
-                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/2C3E50/F39C12?text=EaseShop';">
-                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
-                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">WooCommerce</span>
-                                <a href="http://easeshop.free.nf/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
-                                    Visit Store <i data-lucide="external-link" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="badge-tech">WordPress</span>
-                            <span class="badge-tech">WooCommerce</span>
-                            <span class="badge-tech">Elementor</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">EaseShop</h3>
-                        <p class="text-gray-500 text-sm mb-4 desc-clamp">Modern, fully responsive eCommerce website built with WordPress & WooCommerce, featuring product filters and smooth checkout.</p>
-                        <div class="mt-auto pt-3 flex items-center justify-between">
-                            <a href="http://easeshop.free.nf/" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
-                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
-                            </a>
-                            <span class="text-xs text-gray-400">eCommerce</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 5. Bootstrap 5 Admin Dashboard – Analytics Panel -->
-                <div class="project-card group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-400 fade-in stagger-5 flex flex-col">
-                    <div class="relative overflow-hidden bg-gray-200 h-64 md:h-72">
-                        <img src="images/admin.png" 
-                             alt="Bootstrap 5 Admin Dashboard – analytics dashboard preview"
-                             class="project-img w-full h-full object-cover object-center transition-transform duration-700"
-                             onerror="this.onerror=null; this.src='https://placehold.co/600x450/0f172a/38bdf8?text=Admin+Dashboard';">
-                        <div class="image-overlay absolute inset-0 bg-gradient-to-t from-[#DC2626]/95 via-[#DC2626]/70 to-transparent opacity-0 flex items-end justify-start p-6 transition-all duration-400">
-                            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                                <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">Admin Panel</span>
-                                <a href="https://admin-dashboard-three-ecru-14.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-[#DC2626] font-semibold px-5 py-2.5 rounded-xl shadow-lg hover:bg-gray-100 transition-all text-sm">
-                                    Preview Dashboard <i data-lucide="external-link" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <span class="badge-tech">Bootstrap 5</span>
-                            <span class="badge-tech">React.js</span>
-                            <span class="badge-tech">Next.js</span>
-                            <span class="badge-tech">Tailwind CSS</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 leading-tight">Bootstrap 5 Admin Dashboard – Analytics & Management</h3>
-                        <p class="text-gray-500 text-sm mb-4 desc-clamp">Modern admin panel with data visualization, user management, and analytics widgets. Built with React & Tailwind for efficient workflow.</p>
-                        <div class="mt-auto pt-3 flex items-center justify-between">
-                            <a href="https://admin-dashboard-three-ecru-14.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-[#DC2626] font-medium inline-flex items-center gap-1.5 hover:gap-2.5 transition-all duration-200 text-sm group/link">
-                                View Project <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-1"></i>
-                            </a>
-                            <span class="text-xs text-gray-400">Dashboard</span>
-                        </div>
-                    </div>
-                </div>
+    <section class="projects-section py-5" id="projects">
+  <div class="container">
+    
+    <!-- Section Heading -->
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">My Work</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">
+        Here are some of the websites I have designed and developed for different business needs.
+      </p>
+    </div>
 
-                <!-- Extra call-to-action or optional sixth project area (maintained clean grid) 
-                     Could be extended but we keep professional layout with 5 strong projects -->
+    <!-- Project Cards -->
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project-1.jpg" alt="AutoMarket Pro Website" class="img-fluid project-img">
+            <div class="project-overlay">
+              <a href="#" class="project-btn">Live Preview</a>
             </div>
-            
-            <!-- Optional: subtle CTA link to full portfolio -->
-            <div class="text-center mt-16 fade-in" style="animation-delay: 0.4s;">
-                <a href="#contact" class="inline-flex items-center gap-2 border border-[#DC2626] text-[#DC2626] hover:bg-[#DC2626] hover:text-white transition-all duration-300 font-medium px-6 py-3 rounded-full text-sm shadow-sm">
-                    Explore all projects <i data-lucide="folder-git" class="w-4 h-4"></i>
-                </a>
+          </div>
+          <div class="project-content">
+            <span class="project-category">WordPress Website</span>
+            <h3 class="project-title">AutoMarket-Pro</h3>
+            <p class="project-desc">
+              A modern car marketplace website with clean layout, lead form integration, and professional sections.
+            </p>
+            <div class="project-tech">
+              <span>WordPress</span>
+              <span>Elementor</span>
+              <span>Responsive</span>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project-2.jpg" alt="Perfume Website" class="img-fluid project-img">
+            <div class="project-overlay">
+              <a href="#" class="project-btn">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">E-commerce</span>
+            <h3 class="project-title">Perfume Store</h3>
+            <p class="project-desc">
+              Elegant e-commerce website for perfume products with product display, shopping flow, and premium styling.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project-3.jpg" alt="Restaurant Website" class="img-fluid project-img">
+            <div class="project-overlay">
+              <a href="#" class="project-btn">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Business Website</span>
+            <h3 class="project-title">Restaurant Website</h3>
+            <p class="project-desc">
+              A stylish restaurant website with menu showcase, contact details, and conversion-focused layout.
+            </p>
+            <div class="project-tech">
+              <span>WordPress</span>
+              <span>UI Design</span>
+              <span>Mobile Friendly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project-4.jpg" alt="Gym Landing Page" class="img-fluid project-img">
+            <div class="project-overlay">
+              <a href="#" class="project-btn">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Landing Page</span>
+            <h3 class="project-title">Fitness Studio</h3>
+            <p class="project-desc">
+              High-converting landing page created for fitness business with bold visuals and clear CTA sections.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project-5.jpg" alt="Portfolio Website" class="img-fluid project-img">
+            <div class="project-overlay">
+              <a href="#" class="project-btn">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Portfolio Website</span>
+            <h3 class="project-title">Personal Portfolio</h3>
+            <p class="project-desc">
+              A clean and modern portfolio website to showcase services, skills, projects, and contact details.
+            </p>
+            <div class="project-tech">
+              <span>Bootstrap</span>
+              <span>Responsive</span>
+              <span>Modern UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="images/project-6.jpg" alt="Corporate Website" class="img-fluid project-img">
+            <div class="project-overlay">
+              <a href="#" class="project-btn">Live Preview</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Corporate Website</span>
+            <h3 class="project-title">Corp Vision</h3>
+            <p class="project-desc">
+              Professional corporate website designed for brand trust, company information, and service presentation.
+            </p>
+            <div class="project-tech">
+              <span>WordPress</span>
+              <span>Custom Design</span>
+              <span>SEO Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- View More Button -->
+    <div class="text-center mt-5">
+      <a href="#" class="view-more-btn">View More Projects</a>
+    </div>
+
+  </div>
+</section>
+
+       
 
     <!-- Initialize Lucide Icons -->
     <script>
