@@ -233,7 +233,7 @@
 
     /* ---------- FOOTER MAIN STYLES (fully responsive) ---------- */
     .footer {
-      background: linear-gradient(135deg, #0b1120 0%, #111827 100%);
+      background:black;
       color: #e2e8f0;
       width: 100%;
       margin-top: auto;
@@ -717,8 +717,8 @@
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-10">
-                <a href="#Home" class="text-gray-600 hover:text-black transition-colors">Home</a>
-                <a href="#portfolio" class="text-gray-600 hover:text-black transition-colors">Portfolio</a>
+                <a href="#home" class="text-gray-600 hover:text-black transition-colors">Home</a>
+                <a href="#projects" class="text-gray-600 hover:text-black transition-colors">Portfolio</a>
                 <a href="#about" class="text-gray-600 hover:text-black transition-colors">About</a>
                 <a href="#services" class="text-gray-600 hover:text-black transition-colors">Services</a>
                 <a href="#skills" class="text-gray-600 hover:text-black transition-colors">Skills</a>
@@ -740,7 +740,7 @@
         <div id="mobile-menu" class="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 shadow-lg hidden">
             <div class="flex flex-col p-6 space-y-4">
                 <a href="#home" class="text-gray-600 hover:text-black transition-colors py-2">Home</a>
-                <a href="#portfolio" class="text-gray-600 hover:text-black transition-colors py-2">Portfolio</a>
+                <a href="#projects" class="text-gray-600 hover:text-black transition-colors py-2">Portfolio</a>
                 <a href="#about" class="text-gray-600 hover:text-black transition-colors py-2">About</a>
                 <a href="#services" class="text-gray-600 hover:text-black transition-colors py-2">Services</a>
                 <a href="#skills" class="text-gray-600 hover:text-black transition-colors py-2">Skills</a>
@@ -781,7 +781,7 @@
             
             <!-- CTAs -->
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 fade-in stagger-3">
-                <a href="#work" class="bg-[#DC2626] hover:bg-[#DC2626] text-white rounded-full px-8 py-4 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <a href="#projects" class="bg-[#DC2626] hover:bg-[#DC2626] text-white rounded-full px-8 py-4 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     View Portfolio
                 </a>
                 <a href="#contact" class="border border-gray-300 hover:border-gray-400 text-gray-800 rounded-full px-8 py-4 transition-all duration-300 hover:scale-105">
@@ -1085,50 +1085,14 @@
                     <h2 class="text-4xl md:text-5xl font-bold mb-8">About Me</h2>
                     
                     <p class="text-text-gray text-lg mb-6">
-                        I'm a freelance <span class="font-bold text-black">Web Designer & Developer</span> specializing in building modern, responsive, and high-performance websites using both custom coding and CMS solutions.
-                    </p>
-                    
-                    <p class="text-text-gray text-lg mb-6">
-                        I create visually appealing, fast, and user-friendly websites that are optimized for conversions and business growth. From frontend design to backend functionality, I deliver complete web solutions tailored to client needs.
-                    </p>
-
-                    <p class="text-text-gray text-lg mb-8">
-                        My expertise includes modern frameworks like React.js and Next.js, along with WordPress development using WooCommerce and Elementor. I also focus on performance optimization, SEO basics, and clean, scalable code.
-                    </p>
-
-                    <div class="flex flex-wrap gap-3">
-                        <!-- Frontend -->
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">HTML5</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">CSS3</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">JavaScript</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">React.js</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Next.js</span>
-                         <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">TypeScript</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Tailwind CSS</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Bootstrap</span>
-
-                        <!-- Backend -->
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">PHP</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">MySQL</span>
-
-                        <!-- CMS -->
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">WordPress</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">WooCommerce</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Elementor</span>
-
-                        <!-- Tools -->
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">GitHub</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Canva</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">AI Tools</span>
-
-                        <!-- Other -->
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">AJAX</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">jQuery</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Website Optimization</span>
-                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium">Basic SEO</span>
-                    </div>
+                        I'm a passionate<span class="font-bold text-black">Web Designer & Developer</span> pecializing in creating modern, responsive and high-performance websites for businesses. I have 1.5+ years of experience in designing and developing websites using WordPress, PHP, HTML, CSS, JavaScript and Bootstrap.</p>
+                     <p class="text-text-gray text-lg mb-6">
+                        I build business websites, e-commerce stores, landing pages and custom web applications that are visually appealing, fast loading and easy to manage. My goal is to help businesses grow online with professional design and user-friendly experience.</p>
+              
+                   
                 </div>
 
+                
                 <div class="animate-slide-in" style="animation-delay: 0.3s">
                     <div class="relative">
                         <div class="w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
@@ -1136,7 +1100,7 @@
                                  alt="Workspace" class="w-full h-full object-cover">
                         </div>
                         <div class="absolute -bottom-6 -left-6 bg-crimson text-white p-8 rounded-2xl shadow-xl">
-                            <p class="text-4xl font-bold">1+</p>
+                            <p class="text-4xl font-bold">1.5</p>
                             <p class="text-lg">Years Experience</p>
                         </div>
                     </div>
